@@ -75,8 +75,8 @@ python3 llm_comms.py log [--node qwen]
 
 | Verdict | Meaning |
 |---|---|
-| `VERIFIED  | checked independently; two concordant credible sources or direct execution |
-| `SUPPORTED  | one credible source or a single clean run; reasonable but unconfirmed |
+| `VERIFIED` | checked independently; two concordant credible sources or direct execution |
+| `SUPPORTED` | one credible source or a single clean run; reasonable but unconfirmed |
 | `CONTESTED` | credible sources disagree — report the conflict, don't average it away |
 | `STALE` | the date check fails — a guess wearing a date |
 | `UNSOURCED` | "studies show" with no study named — don't build on it |

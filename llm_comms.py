@@ -10,9 +10,9 @@ Commands:
     reply     compose a return envelope (swaps from/to, links reply-to)
     validate  check an envelope is well-formed
     grade     grade a return (claim-verification verdicts) and log it
-    log       showthe exchange log (the mesh's memory)
+    log       show the exchange log (the mesh's memory)
 
-Stddlib only. Python 3.8+.
+Stdlib only. Python 3.8+.
 """
 import argparse
 import datetime
@@ -133,7 +133,7 @@ def log_read():
     if not os.path.isfile(log_path()):
         return []
     out = []
-    with open(logpath(), encoding="utf-8") as f:
+    with open(log_path(), encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line:
@@ -146,7 +146,7 @@ def summarize(text, width=48):
     return flat[:width] + ("..." if len(flat) > width else "")
 
 
-# -------------------------------------------------------------------- commands
+# ---------------------------------------------------------------- commands
 
 def cmd_send(args):
     eid, path = write_envelope(args.from_node, args.to, args.task,
